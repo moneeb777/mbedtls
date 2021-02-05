@@ -1,0 +1,32 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "ctest",
+            "type": "shell",
+            "command": "cd build/tests;ctest",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "ctest test_suite_base64",
+            "type": "shell",
+            "command": "cd build/tests;./test_suite_base64"
+        },
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "cd build;ninja;",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
